@@ -1,10 +1,10 @@
-require x-load.inc
+require ../meta/recipes-bsp/x-load/x-load.inc
 
 FILESDIR = "${@os.path.dirname(bb.data.getVar('FILE',d,1))}/x-load-omap4-git/${MACHINE}"
 
-TAG="L24.10-p2"
+TAG="L24.10-p3"
 PV = "1.41-ti-${TAG}"
-PR="r0"
+PR="r1"
 
 SRC_URI = "git://dev.omapzoom.org/pub/scm/bootloader/x-loader.git;branch=omap4_dev;protocol=git"
 SRCREV = "${TAG}"
