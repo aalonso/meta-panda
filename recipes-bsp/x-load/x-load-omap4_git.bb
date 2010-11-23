@@ -2,12 +2,12 @@ require ../meta/recipes-bsp/x-load/x-load.inc
 
 FILESDIR = "${@os.path.dirname(bb.data.getVar('FILE',d,1))}/x-load-omap4-git/${MACHINE}"
 
-TAG="L24.10-p3"
-PV = "1.41-ti-${TAG}"
-PR="r1"
+BRANCH="omap4_panda_L24.9"
+PV = "1.41-ti-${BRANCH}"
+PR="r2"
 
-SRC_URI = "git://dev.omapzoom.org/pub/scm/bootloader/x-loader.git;branch=omap4_dev;protocol=git"
-SRCREV = "${TAG}"
+SRC_URI = "git://gitorious.org/pandaboard/x-loader.git;branch=${BRANCH};protocol=git"
+SRCREV = "a41abea82b5f02265cd9f7140f0f10be3a9c97e7"
 
 S = "${WORKDIR}/git"
 
