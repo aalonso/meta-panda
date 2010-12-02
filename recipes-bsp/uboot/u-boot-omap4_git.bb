@@ -1,12 +1,12 @@
-require u-boot.inc
+require ../meta/recipes-bsp/uboot/u-boot.inc
 
-TAG="L24.10"
-SRC_URI = "git://dev.omapzoom.org/pub/scm/bootloader/u-boot.git;branch=omap_upstram;protocol=git"
+TAG="L24.11"
+BRANCH="omap4_upstream"
+SRC_URI = "git://dev.omapzoom.org/pub/scm/bootloader/u-boot.git;branch=${BRANCH};protocol=git"
 SRCREV = "${TAG}"
 
-PV="2010-09-rc1-ti-${TAG}"
-PR="r0"
-
+PV="2010-09-rc1-ti-${BRANCH}"
+PR="r1"
 
 UBOOT_MACHINE_pandaboard = "omap4_panda_config"
 UBOOT_MACHINE_sdp4430 = "omap4_sdp4430_config"
