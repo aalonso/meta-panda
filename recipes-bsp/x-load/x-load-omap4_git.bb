@@ -2,12 +2,12 @@ require x-load.inc
 
 FILESDIR = "${@os.path.dirname(bb.data.getVar('FILE',d,1))}/x-load-omap4-git/${MACHINE}"
 
-TAG="L24.11"
-BRANCH="omap4_dev"
+TAG = "accb403c3f14d1d4797bb2262cce0c8bb8d4a765"
+BRANCH="master"
 PV = "1.41-ti-${BRANCH}"
-PR="r2"
+PR="r3"
 
-SRC_URI = "git://dev.omapzoom.org/pub/scm/bootloader/x-loader.git;branch=${BRANCH};protocol=git"
+SRC_URI = "git://www.sakoman.com/git/x-loader.git;branch=${BRANCH};protocol=git"
 SRCREV = "${TAG}"
 
 S = "${WORKDIR}/git"
