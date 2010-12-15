@@ -7,7 +7,7 @@ TAG="6aba79f8f85b937596373cda8e266b823395996e"
 BRANCH="ti-omap4"
 PR="r0"
 
-SRC_URI = "git://kernel.ubuntu.com/ubuntu/ubuntu-maverick.git;branch=${BRANCH}protocol=git \
+SRC_URI = "git://kernel.ubuntu.com/ubuntu/ubuntu-maverick.git;branch=${BRANCH};protocol=git \
            file://defconfig"
 SRCREV = "${TAG}"
 
