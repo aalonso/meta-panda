@@ -3,7 +3,7 @@ SECTION = "bootloaders"
 PRIORITY = "optional"
 LICENSE = "GPLv2+"
 
-DEPENDS = "signgp-native"
+DEPENDS = ""
 
 PARALLEL_MAKE=""
 
@@ -30,7 +30,7 @@ do_compile () {
 }
 
 do_install () {
-	signGP ${S}/x-load.bin ${XLOAD_LOAD_ADDRESS}
+	#signGP ${S}/x-load.bin ${XLOAD_LOAD_ADDRESS}
 
 	install -d ${D}/boot
 	install ${S}/x-load.bin.ift ${D}/boot/${MLO_IMAGE}
