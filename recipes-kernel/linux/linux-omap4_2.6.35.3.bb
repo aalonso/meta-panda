@@ -8,9 +8,11 @@ LECENSE_FILES_CHECKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
 TAG="6aba79f8f85b937596373cda8e266b823395996e"
 BRANCH="ti-omap4"
-PR="r3"
+PR="r4"
 
 SRC_URI = "git://kernel.ubuntu.com/ubuntu/ubuntu-maverick.git;branch=${BRANCH};protocol=git \
+		   file://Fix-FTBS-caused-by-new-binutils.patch \
+		   file://Add-AFLAGS-for-sleep44xx-to-fix-FTBS.patch \
            file://defconfig"
 SRCREV = "${TAG}"
 
