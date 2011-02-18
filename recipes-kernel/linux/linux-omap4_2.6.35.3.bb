@@ -1,4 +1,4 @@
-require recipes-kernel/linux/linux-omap2.inc
+require recipes-kernel/linux/linux.inc
 
 THISDIR := "${@os.path.dirname(bb.data.getVar('FILE', d, True))}"
 FILESPATH =. "${@base_set_filespath(["${THISDIR}/${PN}"], d)}:"
@@ -8,7 +8,7 @@ LECENSE_FILES_CHECKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
 TAG="6aba79f8f85b937596373cda8e266b823395996e"
 BRANCH="ti-omap4"
-PR="r4"
+PR="r5"
 
 SRC_URI = "git://kernel.ubuntu.com/ubuntu/ubuntu-maverick.git;branch=${BRANCH};protocol=git \
 		   file://Fix-FTBS-caused-by-new-binutils.patch \
